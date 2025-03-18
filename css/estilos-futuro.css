@@ -1,0 +1,204 @@
+@font-face {
+    font-family: RobotoCondensed;
+    src: url(../fonts/RobotoCondensed-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: RON;
+    src: url(../fonts/RON.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: RobotoCondensed, sans-serif;
+    font-weight: 300;
+}
+
+html {
+    height: 100%;
+}
+
+.emoji {
+    display: none;
+}
+
+header {
+    background: linear-gradient(to right, #F5581F, #ACAAAA);
+    /* Colores: Giant orange, Silver */
+    height: 135px;
+    padding-bottom: 3px;
+}
+
+.encabezado {
+    background-color: #0F0C13; /* Color: Night */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 132px;
+}
+
+.titulo {
+    font-family: RON;
+    font-size: 3em;
+    text-align: center;
+    font-weight: 900;
+    background: linear-gradient(45deg, #1CDCE1, #ACAAAA);
+    /* Colores: Robbin egg blue, Silver */
+    background-size: 100%;
+    background-repeat: repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+main {
+    background: url(../assets/img/futuro.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #ACAAAA; /* Color: Silver */
+    height: calc(100%-135px);
+    font-size: 1.2rem;
+}
+
+.fieldsets {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    border: solid 1px #F5581F; /* Color: Giants orange */
+    border-radius: 10px;
+    background-color: rgba(18, 2, 35, 0.6);
+    /* Color Dark purple #120223 */
+    padding: 13px;
+    width: 300px;
+}
+
+legend {
+    font-family: RON;
+    font-weight: 300;
+    font-size: 1.3rem;
+    text-shadow: 3px 3px #0F0C13; /* Color: Night */
+}
+
+.datos-personales {
+    height: 580px;
+    margin-top: 10px;
+}
+
+.radios {
+    text-align: center;
+}
+
+.contacto-y-actividades {
+    display: flex;
+    flex-direction: column;
+    height: 580px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.actividades, .contacto {
+    height: 100%;
+}
+
+.cont-actividades {
+    margin-top: 10px;
+    height: 65%;
+}
+
+.cont-contacto {
+    height: 35%;
+}
+
+#nombre, #apellido, #documento, #telefono, #email, #nacionalidad, #mensaje {
+    display: block;
+    width: 100%;
+    border-radius: 4px;
+    background-color: #ACAAAA; /* Color: Silver */
+    padding: 3%;
+    font-size: 1.1rem;
+}
+
+#nombre, #apellido, #documento, #telefono, #email, #nacionalidad{
+    height: 2.2rem;
+}
+
+#mensaje {
+    height: 6rem;
+    resize: none;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    accent-color: #1CDCE1; /* Color: Robbin egg blue */
+    margin: 0px 3px 2px 3px;
+}
+
+.checks-actividades {
+    margin-left: 20px;
+    display: grid;
+    grid-template: 50% 50% / 50% 50%
+}
+
+@media (max-width: 600px) {
+    .contacto-y-actividades {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 400px) {
+
+    header {
+        height: 100px;
+    }
+
+    .encabezado {
+        height: 97px;
+    }
+
+    main {
+        height: calc(100%-100px);
+    }
+
+    .titulo {
+        font-size: 2rem;
+    }
+}
+
+.ultimos-campos {
+    margin-top: 2%;
+    justify-self: center;
+    font-size: 1.1rem;
+    text-shadow: 1px 1px #0F0C13; /* Color: Night */
+}
+
+.botonera-inferior {
+    padding-bottom: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    margin: 0 1% 0 1%;
+    width: 145px;
+    height: 40px;
+    font-family: RON;
+    color: #0F0C13; /* Color: Night */
+    background-color: #ACAAAA; /* Color: Silver */
+    border-radius: 7px;
+}
+
+button:hover {
+    background-color: #1CDCE1; /* Color: Robbin egg blue */
+}
+
+button:active {
+    background-color: #F5581F; /* Color: Giants orange */
+}
