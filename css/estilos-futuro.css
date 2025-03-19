@@ -12,8 +12,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: RobotoCondensed, sans-serif;
-    font-weight: 300;
 }
 
 html {
@@ -24,14 +22,14 @@ html {
     display: none;
 }
 
-header {
+.encabezado {
     background: linear-gradient(to right, #F5581F, #ACAAAA);
     /* Colores: Giant orange, Silver */
     height: 135px;
     padding-bottom: 3px;
 }
 
-.encabezado {
+.cont-titulo {
     background-color: #0F0C13; /* Color: Night */
     display: flex;
     align-items: center;
@@ -61,6 +59,8 @@ main {
     background-size: cover;
     color: #ACAAAA; /* Color: Silver */
     height: calc(100%-135px);
+    font-family: RobotoCondensed, sans-serif;
+    font-weight: 300;
     font-size: 1.2rem;
 }
 
@@ -136,7 +136,7 @@ legend {
     resize: none;
 }
 
-input[type="radio"], input[type="checkbox"] {
+main input[type="radio"], main input[type="checkbox"] {
     accent-color: #1CDCE1; /* Color: Robbin egg blue */
     margin: 0px 3px 2px 3px;
 }
@@ -185,7 +185,7 @@ input[type="radio"], input[type="checkbox"] {
     justify-content: center;
 }
 
-button {
+#iniciar-afiliacion, #restablecer {
     margin: 0 1% 0 1%;
     width: 145px;
     height: 40px;
@@ -195,10 +195,10 @@ button {
     border-radius: 7px;
 }
 
-button:hover {
+#iniciar-afiliacion:hover, #restablecer:hover {
     background-color: #1CDCE1; /* Color: Robbin egg blue */
 }
 
-button:active {
+#iniciar-afiliacion:active, #restablecer:active {
     background-color: #F5581F; /* Color: Giants orange */
 }

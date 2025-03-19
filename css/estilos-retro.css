@@ -12,7 +12,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Montserrat;
 }
 
 .emoji {
@@ -43,7 +42,8 @@
     }
 }
 
-.fieldsets {
+main {
+    font-family: Montserrat;
     font-size: 1.2rem;
 }
 
@@ -53,7 +53,7 @@ fieldset {
 
 .cont-datos-personales, .cont-contacto, .cont-actividades {
     padding: 2%;
-    padding-bottom: 5%;
+    padding-bottom: 3%;
 }
 
 .cont-datos-personales {
@@ -108,7 +108,16 @@ legend {
     resize: none;
 }
 
-input[type="radio"], input[type="checkbox"] {
+.radios {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.radios label {
+    margin-left: 2%;
+}
+
+main input[type="radio"], main input[type="checkbox"] {
     accent-color: #F3B143; /* Color: Hunyadi yellow */
 }
 
@@ -136,16 +145,17 @@ input[type="radio"], input[type="checkbox"] {
 
 .ultimos-campos {
     justify-self: center;
-    margin: 3%;
+    margin-top: 2%;
 }
 
 .botonera-inferior {
-    padding-bottom: 5%;
+    padding-bottom: 3%;
     display: flex;
     justify-content: flex-end;
 }
 
-button {
+#iniciar-afiliacion,
+#restablecer {
     margin: 0 1% 0 1%;
     width: 145px;
     height: 40px;
@@ -157,6 +167,7 @@ button {
     border-radius: 7px;
 }
 
-button:hover {
+#iniciar-afiliacion:hover,
+#restablecer:hover {
     background-color: #F3B143; /* Color: Hunyadi yellow */
 }

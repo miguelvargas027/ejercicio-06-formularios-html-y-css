@@ -5,6 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Afiliación</title>
 
+    <style>
+        .botonera-superior {
+            margin: 0px;
+            padding: 1%;
+            box-sizing: border-box;
+            background-color: dimgray;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .botonera-superior button {
+            height: 30px;
+            margin: 2px;
+        }
+
+        button img {
+            width: 30px;
+        }
+
+        .botonera-superior select {
+            height: 30px;
+        }
+
+        .estilo-radio {
+            display: flex;
+            flex-wrap: wrap;
+            width: 50%;
+        }
+
+        .input-radio {
+            margin-left: 2%;
+        }
+
+        @media (max-width:605px) {
+            .estilo-radio {
+                margin-top: 3%;
+                width: 100%;
+            }
+        }
+
+    </style>
+
     <!-- Skin retro: -->
     <!-- <link rel="stylesheet" href="./css/estilos-retro.css"> -->
 
@@ -14,8 +58,43 @@
 </head>
 <body>
     <header>
+        <div class="botonera-superior">
+            <span>Estilos: </span>
+            <button id="siguiente-estilo" title="Siguiente estilo">
+                <img src="../ejercicio-06-formularios-html-y-css/assets/img/next.png" alt="Siguiente estilo">
+            </button>
+            <button id="estilo-random" title="Estilo aleatorio">
+                <img src="../ejercicio-06-formularios-html-y-css/assets/img/shuffle.png" alt="Estilo random">
+            </button>
+            <button id="fijar-estilo" title="Fijar estilo">
+                <img src="../ejercicio-06-formularios-html-y-css/assets/img/pin.png" alt="Fijar estilo">
+            </button>
+            <select name="select-estilo" id="select-estilo">
+                <option value="" disabled checked>-Seleccionar-</option>
+                <option value="actual">Actual</option>
+                <option value="retro">Retro</option>
+                <option value="futuro">Futuro</option>
+                <option value="sin-estilo">Sin estilo</option>
+            </select>
+            <label for="estilo-radio" class="estilo-radio">
+                <div class="input-radio">
+                    <label for="actual"><input type="radio" id="actual" name="estilo-radio">Actual</label>
+                </div>
+                <div class="input-radio">
+                    <label for="retro"><input type="radio" id="retro" name="estilo-radio">Retro</label>
+                </div>
+                <div class="input-radio">
+                    <label for="futuro"><input type="radio" id="futuro" name="estilo-radio">Futuro</label>
+                </div>
+                <div class="input-radio">
+                    <label for="sin-estilo"><input type="radio" id="sin-estilo" name="estilo-radio">Sin estilo</label>
+                </div>
+            </label>
+        </div>
         <div class="encabezado">
-            <h1 class="titulo">Vení al Gym! <span class="emoji">💪🏽</span></h1>
+            <div class="cont-titulo">
+                <h1 class="titulo">Vení al Gym! <span class="emoji">💪🏽</span></h1>
+            </div>
         </div>
     </header>
     <main>
@@ -49,12 +128,9 @@
                             <textarea name="mensaje" id="mensaje"></textarea><br>
                             <label for="sexo">Sexo:*</label><br>
                             <div class="radios">
-                                <input type="radio" id="femenino" name="genero" value="femenino" checked>
-                                <label for="femenino">Femenino</label>
-                                <input type="radio" id="masculino" name="genero" value="masculino">
-                                <label for="masculino">Masculino</label>
-                                <input type="radio" id="otro" name="genero" value="otro">
-                                <label for="otro">Otro</label>
+                                <label for="femenino"><input type="radio" id="femenino" name="genero" value="femenino" checked> Femenino</label>
+                                <label for="masculino"><input type="radio" id="masculino" name="genero" value="masculino"> Masculino</label>
+                                <label for="otro"><input type="radio" id="otro" name="genero" value="otro"> Otro</label>
                             </div>
                         </div>
                     </fieldset>
@@ -102,8 +178,8 @@
                     <span class="aviso">*: Campo obligatorio</span>
                 </div><br><br>
                 <div class="botonera-inferior">
-                    <button type="submit">Iniciar afiliación</button>
-                    <button type="reset">Restablecer</button>
+                    <button id="iniciar-afiliacion" type="submit">Iniciar afiliación</button>
+                    <button id="restablecer" type="reset">Restablecer</button>
                 </div>
             </div>
         </form>
