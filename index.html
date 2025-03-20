@@ -4,9 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Afiliación</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <style>
         .botonera-superior {
@@ -52,14 +49,14 @@
 
     </style>
 
-    <!-- Skin por defecto: -->
-    <link rel="stylesheet" href="./css/predeterminado.css">
-
     <!-- Skin retro: -->
     <!-- <link rel="stylesheet" href="./css/estilos-retro.css"> -->
 
     <!-- Skin futurista: -->
     <!-- <link rel="stylesheet" href="./css/estilos-futuro.css"> -->
+
+    <!-- Skin predeterminado: -->
+    <link rel="stylesheet" href="./css/predeterminado.css"> 
 
 </head>
 <body>
@@ -67,15 +64,15 @@
         <div class="botonera-superior">
             <span>Estilos: </span>
             <button id="siguiente-estilo" title="Siguiente estilo">
-                <img src="../ejercicio-06-formularios-html-y-css/assets/img/next.png" alt="Siguiente estilo">
+                <img src="../assets/img/next.png" alt="Siguiente estilo">
             </button>
             <button id="estilo-random" title="Estilo aleatorio">
-                <img src="../ejercicio-06-formularios-html-y-css/assets/img/shuffle.png" alt="Estilo random">
+                <img src="../assets/img/shuffle.png" alt="Estilo random">
             </button>
             <button id="fijar-estilo" title="Fijar estilo">
-                <img src="./ejercicio-06-formularios-html-y-css/assets/img/pin.png" alt="Fijar estilo">
+                <img src="../assets/img/pin.png" alt="Fijar estilo">
             </button>
-            <select title="select-estilo" id="select-estilo">
+            <select name="select-estilo" id="select-estilo">
                 <option value="" disabled checked>-Seleccionar-</option>
                 <option value="actual">Actual</option>
                 <option value="retro">Retro</option>
@@ -115,7 +112,7 @@
                             <label for="apellido">Apellido:*</label>
                             <input type="text" id="apellido" name="apellido" maxlength="30" required><br>
                             <label for="Documento">Documento:*</label>
-                            <input title="documento" type="number" id="documento" name="Documento" max="60000000" min="1000000" required><br>
+                            <input type="number" id="documento" name="Documento" max="60000000" min="1000000" required><br>
                             <label for="nacionalidad">Nacionalidad:*</label>
                             <select name="nacionalidad" id="nacionalidad" required>
                             <option value disabled selected>- Seleccionar -</option>
