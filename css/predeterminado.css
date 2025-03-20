@@ -1,0 +1,145 @@
+body {
+    background-color: #1F2023;
+    font-family: 'roboto', sans-serif;
+    color: white;
+}
+
+/*cajitas forms*/
+
+header {
+    width: 65%;
+    margin: auto;
+}
+
+main {
+    width: 65%;
+    margin: auto;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5em;
+    padding: 20px 0;
+    border-top: solid 20px #4D6D63;
+    border-right: solid 20px #1F2023;
+    border-left: solid 20px #1F2023;
+    border-bottom: solid 20px #4D6D63;
+    margin: 30px 0px;
+}
+
+fieldset {
+    background-color: #D6E2DE;
+    padding: 20px;
+    border: solid 2px #4D6D63;
+    border-radius: 5px;
+    color: #1F2023;
+    
+}
+
+fieldset:focus-within {
+    background-color: #A6C1B9;
+    transition: 0.5s;
+}
+
+/*Estilos leyenda, inputs y fieldsets*/
+
+legend {
+    background-color: #2B3D37;
+    color: white;
+    text-align: left;
+    padding: 0;
+    padding: 15px 10px;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus {
+    background-color: #4D6D63;
+    border: 1px solid #4D6D63;
+    transition: 0.5s;
+    color: white;
+}
+
+input:focus fieldset {
+    background-color: red;
+}
+
+
+.cont-actividades, .cont-contacto, .cont-datos-personales {
+    padding: 5% 0;
+    text-align: center;
+}
+
+.cont-contacto, .cont-datos-personales {
+    border-bottom: dotted 18px #D6E2DE;
+}
+
+
+.inputs-contacto, .inputs-datos-personales {
+    padding: 20px 80px;
+}
+
+.inputs-actividades {
+    text-align: left;
+}
+
+/*campos contacto*/
+
+input#telefono {
+    text-align: right;
+}
+
+input#email {
+    text-align: right;
+}
+
+/*botones*/
+
+.botonera-inferior {
+    text-align: center;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+}
+
+.botonera-inferior button {
+    background-color: #2B3D37;
+    padding: 10px 20px;
+    border: solid 1px #A6C1B9;
+    border-radius: 5px;
+    color: #A6C1B9;
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    transition: 0.5s;
+}
+

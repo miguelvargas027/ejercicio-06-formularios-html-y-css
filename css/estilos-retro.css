@@ -1,0 +1,173 @@
+@font-face {
+    font-family: Swell;
+    src: url(../fonts/swell-regular.ttf);
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.emoji {
+    display: none;
+}
+
+.titulo {
+    height: 200px;
+    background: url(../assets/img/retro.jpg);
+    background-size: 200px;
+    background-repeat:repeat-x;
+    font-family: Swell;
+    font-size: 5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #F4E3C7; /* Color: Champagne */
+    text-shadow: 5px 5px 2px #F3B143; /* Color: Hunyadi yellow */
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    padding-right: 6%;
+    border-bottom: solid 2px #000000; /* Color: Black */
+}
+
+@media (max-width: 500px) {
+    .titulo {
+        font-size: 3.3rem;
+    }
+}
+
+main {
+    font-family: Montserrat;
+    font-size: 1.2rem;
+}
+
+fieldset {
+    border: none;
+}
+
+.cont-datos-personales, .cont-contacto, .cont-actividades {
+    padding: 2%;
+    padding-bottom: 3%;
+}
+
+.cont-datos-personales {
+    background-color: #B2E3CD; /* Color: Celadon */
+}
+
+.cont-contacto {
+    background-color: #F3B143; /* Color: Hunyadi yellow */
+}
+
+.cont-actividades {
+    background-color: #F4E3C7; /* Color: Champagne */
+}
+
+legend {
+    font-family: Swell;
+    font-size: 2.7rem;
+    margin-left: 5px;
+    color: #000000; /* Color: Black */
+}
+
+.datos-personales legend::after {
+    content: "📝";
+}
+
+.contacto legend::after {
+    content: "☎️";
+}
+
+.actividades legend::after {
+    content: "🎾";
+}
+
+.inputs-datos-personales, .inputs-contacto, .inputs-actividades {
+    width: 500px;
+    justify-self: center;
+}
+
+#nombre, #apellido, #documento, #telefono, #email, #nacionalidad, #mensaje {
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 1.1rem;
+}
+
+#nombre, #apellido, #documento, #telefono, #email, #nacionalidad {
+    height: 1.8rem;
+}
+
+#mensaje {
+    height: 6rem;
+    resize: none;
+}
+
+.radios {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.radios label {
+    margin-left: 2%;
+}
+
+main input[type="radio"], main input[type="checkbox"] {
+    accent-color: #F3B143; /* Color: Hunyadi yellow */
+}
+
+.checks-actividades {
+    justify-self: center;
+}
+
+@media (max-width: 600px) {
+    .inputs-datos-personales, .inputs-contacto, .inputs-actividades {
+            width: 85%;
+    }
+
+    .checks-actividades {
+        width: 100%;
+        display: grid;
+        grid-template: 50% 50% / 50% 50%
+    }
+}
+
+.parte-inferior {
+    background-color: #000000; /* Color: Black */
+    color: #F4E3C7; /* Color: Champagne */
+    padding: 2%;
+}
+
+.ultimos-campos {
+    justify-self: center;
+    margin-top: 2%;
+}
+
+.botonera-inferior {
+    padding-bottom: 3%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#iniciar-afiliacion,
+#restablecer {
+    margin: 0 1% 0 1%;
+    width: 145px;
+    height: 40px;
+    font-family: Swell;
+    font-size: 1.3rem;
+    font-weight: 100;
+    color: #000000; /* Color: Black */
+    background-color: #B2E3CD; /* Color: Celadon */
+    border-radius: 7px;
+}
+
+#iniciar-afiliacion:hover,
+#restablecer:hover {
+    background-color: #F3B143; /* Color: Hunyadi yellow */
+}
