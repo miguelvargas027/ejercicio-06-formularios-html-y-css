@@ -20,6 +20,13 @@
         .botonera-superior button {
             height: 30px;
             margin: 2px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+        .botonera-superior button:hover {
+            background-color: black;
+            color: white;
         }
 
         button img {
@@ -69,13 +76,13 @@
         <div class="botonera-superior">
             <span>Estilos: </span>
             <button id="siguiente-estilo" title="Siguiente estilo">
-                <img src="../assets/img/next.png" alt="Siguiente estilo">
+                <i class="fa-solid fa-forward"></i>
             </button>
             <button id="estilo-random" title="Estilo aleatorio">
-                <img src="../assets/img/shuffle.png" alt="Estilo random">
+                <i class="fa-solid fa-shuffle"></i>
             </button>
             <button id="fijar-estilo" title="Fijar estilo">
-                <img src="../assets/img/pin.png" alt="Fijar estilo">
+                <i class="fa-solid fa-floppy-disk"></i>
             </button>
             <select name="select-estilo" id="select-estilo">
                 <option value="" disabled checked>-Seleccionar-</option>
@@ -201,5 +208,6 @@
         </form>
     </main>
     <script src="/js/index.js"></script>
+    <script src="https://kit.fontawesome.com/12ccf94b47.js" crossorigin="anonymous"></script>
 </body>
 </html>
