@@ -3,17 +3,42 @@ const linkEstilo = document.getElementById("estilo");
 const selectorEstilos = document.getElementById("select-estilo");
 const radioEstilos = document.querySelectorAll("input[name='estilo-radio']");
 const botonRecordar = document.getElementById("fijar-estilo");
+const botonSiguiente = document.getElementById("siguiente-estilo");
 
 // Variable para rastrear si el modo "Recordar" está activo
 let recordarActivo = false;
 
+// Array con los estilos disponibles
+const estilos = ["estilos.css", "estilos-futuro.css", "estilos-retro.css"];
+let indiceActual = 0;
+
+// Función para cambiar el estilo según el botón "siguiente"
+
+function cambiarSiguienteEstilo() {
+    if (indiceActual < estilos.length) {
+        // Aplica el siguiente estilo
+        linkEstilo.setAttribute("href", `css/${estilos[indiceActual]}`);
+        if (recordarActivo) {
+            localStorage.setItem("estiloGuardado", `css/${estilos[indiceActual]}`);
+        }
+        indiceActual++;
+    } else {
+        // Reinicia el ciclo y carga una versión sin estilos
+        linkEstilo.setAttribute("href", ""); // Sin estilos
+        if (recordarActivo) {
+            localStorage.removeItem("estiloGuardado");
+        }
+        indiceActual = 0; // Reinicia el índice
+    }
+}
+botonSiguiente.addEventListener("click", cambiarSiguienteEstilo);
+
 // Función para cambiar el estilo de forma aleatoria
 function cambiarEstiloAleatorio() {
-    const estilos = ["estilos.css", "estilos-futuro.css", "estilos-retro.css"];
     const indiceAleatorio = Math.floor(Math.random() * estilos.length);
     const estiloAleatorio = estilos[indiceAleatorio];
 
-    linkEstilo.setAttribute("href", `./css/${estiloAleatorio}`);
+    linkEstilo.setAttribute("href", `css/${estiloAleatorio}`);
     if (recordarActivo) {
         localStorage.setItem("estiloGuardado", rutaCSS);
     }
