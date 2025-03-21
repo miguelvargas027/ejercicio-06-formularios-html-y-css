@@ -68,7 +68,7 @@ document.getElementById("estilo-random").addEventListener("click", cambiarEstilo
 function cambiarEstiloSelect() {
     const indiceSelect = selectorEstilos.value;
     linkEstilo.setAttribute("href", `${estilos[indiceSelect]}`);
-    indiceActual = indiceSelect;
+    indiceActual = parseInt(indiceSelect);
 
     removerEstiloGuardado(); //Quita estilo de la memoria
 }
@@ -79,7 +79,7 @@ selectorEstilos.addEventListener("change", cambiarEstiloSelect);
 function cambiarEstiloRadio() {
     const indiceRadio = this.value;
     linkEstilo.setAttribute("href", `${estilos[indiceRadio]}`);
-    indiceActual = indiceRadio;
+    indiceActual = parseInt(indiceRadio);
 
     removerEstiloGuardado(); //Quita estilo de la memoria
 }
