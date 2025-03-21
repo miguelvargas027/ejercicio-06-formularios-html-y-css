@@ -60,6 +60,25 @@ html {
     -moz-text-fill-color: transparent;
 }
 
+@media (max-width: 400px) {
+
+    .encabezado {
+        height: 100px;
+    }
+
+    .cont-titulo {
+        height: 97px;
+    }
+
+    main {
+        height: calc(100%-100px);
+    }
+
+    .titulo {
+        font-size: 2rem;
+    }
+}
+
 /*cajitas forms*/
 
 main {
@@ -147,32 +166,13 @@ legend {
     }
 }
 
-@media (max-width: 400px) {
-
-    .encabezado {
-        height: 100px;
-    }
-
-    .cont-titulo {
-        height: 97px;
-    }
-
-    main {
-        height: calc(100%-100px);
-    }
-
-    .titulo {
-        font-size: 2rem;
-    }
-}
-
 /* Estilos inputs */
 
 #nombre,
 #apellido,
 #documento,
 #telefono,
-#email,
+#correo,
 #nacionalidad,
 #mensaje {
     display: block;
@@ -188,7 +188,7 @@ legend {
 #apellido,
 #documento,
 #telefono,
-#email,
+#correo,
 #nacionalidad {
     height: 2.2rem;
 }

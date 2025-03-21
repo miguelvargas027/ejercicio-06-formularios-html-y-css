@@ -25,13 +25,7 @@ const estilos = ["./css/estilos.css", "./css/estilos-retro.css", "./css/estilos-
 
 //Indice actual
 
-let indiceActual;
-for (let i = 0; i < estilos.length; i++) {
-    if (linkEstilo.href == estilos[i]) {
-        indiceActual = i;
-        break;
-    }
-}
+let indiceActual = 0;
 
 // Función para cambiar el estilo según el botón "siguiente"
 
@@ -66,9 +60,9 @@ document.getElementById("estilo-random").addEventListener("click", cambiarEstilo
 
 // Función para cambiar el estilo según el select
 function cambiarEstiloSelect() {
-    const indiceSelect = selectorEstilos.value;
+    const indiceSelect = parseInt(selectorEstilos.value);
     linkEstilo.setAttribute("href", `${estilos[indiceSelect]}`);
-    indiceActual = parseInt(indiceSelect);
+    indiceActual = indiceSelect;
 
     removerEstiloGuardado(); //Quita estilo de la memoria
 }
@@ -77,9 +71,9 @@ selectorEstilos.addEventListener("change", cambiarEstiloSelect);
 
 //Función para cambiar el estilo según el input radio
 function cambiarEstiloRadio() {
-    const indiceRadio = this.value;
+    const indiceRadio = parseInt(this.value);
     linkEstilo.setAttribute("href", `${estilos[indiceRadio]}`);
-    indiceActual = parseInt(indiceRadio);
+    indiceActual = indiceRadio;
 
     removerEstiloGuardado(); //Quita estilo de la memoria
 }
@@ -111,8 +105,12 @@ function aplicarEstiloGuardado() {
         linkEstilo.setAttribute("href", estiloGuardado);
         recordarActivo = true;
         botonRecordar.classList.add("hundido");
+        for (var i = 0; i < estilos.length; i++) {
+            if (estiloGuardado == estilos[i]) {
+                indiceActual = i;
+            }
+        }
     }
 }
 
-// Aplicar el estilo guardado al cargar la página
 aplicarEstiloGuardado();

@@ -115,6 +115,10 @@ legend {
     justify-self: center;
 }
 
+.inputs-datos-personales span {
+    margin-left: 1%;
+}
+
 .radios {
     display: flex;
     flex-wrap: wrap;
@@ -149,7 +153,7 @@ legend {
 #apellido,
 #documento,
 #telefono,
-#email,
+#correo,
 #nacionalidad,
 #mensaje {
     display: block;
@@ -162,7 +166,7 @@ legend {
 #apellido,
 #documento,
 #telefono,
-#email,
+#correo,
 #nacionalidad {
     height: 1.8rem;
 }
@@ -197,6 +201,12 @@ main input[type="checkbox"] {
     padding-bottom: 3%;
     display: flex;
     justify-content: flex-end;
+}
+
+@media (max-width:700px) {
+    .botonera-inferior {
+        justify-content: center;
+    }
 }
 
 #iniciar-afiliacion,

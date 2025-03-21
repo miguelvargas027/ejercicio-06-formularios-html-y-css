@@ -74,7 +74,7 @@ fieldset:focus-within {
 .cont-actividades,
 .cont-contacto,
 .cont-datos-personales {
-    padding-top: 4%;
+    padding-top: 25px;
     text-align: center;
 }
 
@@ -84,7 +84,7 @@ fieldset:focus-within {
     display: block;
     width: 40%;
     justify-self: center;
-    margin-top: 30px;
+    margin-top: 25px;
     border-bottom: dotted 12px #D6E2DE;
 }
 
@@ -145,7 +145,7 @@ legend .emoji {
 #apellido,
 #documento,
 #telefono,
-#email,
+#correo,
 #nacionalidad,
 #mensaje {
     width: 100%;
@@ -162,7 +162,7 @@ legend .emoji {
 }
 
 input[type="text"]:focus,
-#email:focus,
+#correo:focus,
 #documento:focus,
 #telefono:focus,
 #nacionalidad:focus,
@@ -177,28 +177,32 @@ input#nombre,
 input#apellido,
 input#documento,
 input#telefono,
-input#email {
+input#correo {
     text-align: right;
 }
 
 /* Placeholders para distintos navegadores */
 
 #telefono:focus::-webkit-input-placeholder,
-#email:focus::-webkit-input-placeholder {
+#correo:focus::-webkit-input-placeholder {
     color: #A6C1B9;
 }
 
 #telefono:focus::-moz-placeholder,
-#email:focus::-moz-placeholder {
+#correo:focus::-moz-placeholder {
     color: #A6C1B9;
 }
 
 #telefono:focus::-ms-input-placeholder,
-#email:focus::-ms-input-placeholder {
+#correo:focus::-ms-input-placeholder {
     color: #A6C1B9;
 }
 
-/*botones*/
+/*Parte inferior y botones*/
+
+.parte-inferior {
+    margin-top: 25px;
+}
 
 .botonera-inferior {
     text-align: center;
