@@ -149,11 +149,11 @@ legend {
 
 @media (max-width: 400px) {
 
-    header {
+    .encabezado {
         height: 100px;
     }
 
-    .encabezado {
+    .cont-titulo {
         height: 97px;
     }
 
