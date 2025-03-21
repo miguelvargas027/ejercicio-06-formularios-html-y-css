@@ -74,13 +74,18 @@ fieldset:focus-within {
 .cont-actividades,
 .cont-contacto,
 .cont-datos-personales {
-    padding: 5% 0;
+    padding-top: 4%;
     text-align: center;
 }
 
-.cont-contacto,
-.cont-datos-personales {
-    border-bottom: dotted 10px #D6E2DE;
+.cont-contacto::after,
+.cont-datos-personales::after {
+    content: " ";
+    display: block;
+    width: 40%;
+    justify-self: center;
+    margin-top: 30px;
+    border-bottom: dotted 12px #D6E2DE;
 }
 
 /*Leyendas*/
