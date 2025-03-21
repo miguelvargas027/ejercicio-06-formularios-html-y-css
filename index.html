@@ -6,6 +6,7 @@
     <title>Afiliación</title>
 
     <style>
+
         .botonera-superior {
             margin: 0px;
             padding: 1%;
@@ -19,22 +20,21 @@
 
         .botonera-superior button {
             height: 30px;
+            width: 40px;
             margin: 2px;
             font-size: 1.2rem;
             cursor: pointer;
             transition: background-color 0.3s, box-shadow 0.3s;
         }
+
         .botonera-superior button:hover {
             background-color: black;
             color: white;
         }
 
-        button img {
-            width: 30px;
-        }
-
         .botonera-superior select {
             height: 30px;
+            margin-left: 2px;
         }
 
         .estilo-radio {
@@ -47,7 +47,7 @@
             margin-left: 2%;
         }
 
-        @media (max-width:605px) {
+        @media (max-width:650px) {
             .estilo-radio {
                 margin-top: 3%;
                 width: 100%;
@@ -55,20 +55,13 @@
         }
 
         .hundido {
-            background-color: #ccc;
+            background-color: dimgray;
             box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
         }
 
     </style>
 
-    <!-- Skin retro: -->
-    <!-- <link rel="stylesheet" href="./css/estilos-retro.css"> -->
-
-    <!-- Skin futurista: -->
-    <!-- <link rel="stylesheet" href="./css/estilos-futuro.css"> -->
-
-    <!-- Skin predeterminado: -->
-    <link id= "estilo" rel="stylesheet" href="./css/estilos.css"> 
+    <link id="estilo" rel="stylesheet" href="./css/estilos.css">
 
 </head>
 <body>
@@ -84,33 +77,25 @@
             <button id="fijar-estilo" title="Fijar estilo">
                 <i class="fa-solid fa-floppy-disk"></i>
             </button>
-            <select title="select-estilo" name="select-estilo" id="select-estilo">
-                <option value="" disabled checked>-Seleccionar-</option>
-                <option value="css/estilos.css">Actual</option>
-                <option value="css/estilos-retro.css">Retro</option>
-                <option value="css/estilos-futuro.css">Futuro</option>
-                <option value="sin-estilo">Sin estilo</option>
+            <select name="select-estilo" id="select-estilo">
+                <option value="" disabled>-Seleccionar-</option>
+                <option value="0" id="sel-0">Predeterminado</option>
+                <option value="1" id="sel-1">Retro</option>
+                <option value="2" id="sel-2">Futuro</option>
+                <option value="3" id="sel-3">Sin estilo</option>
             </select>
-            <label for="estilo-radio" class="estilo-radio">
+            <label class="estilo-radio">
                 <div class="input-radio">
-                    <label for="actual">
-                        <input type="radio" id="actual" name="estilo-radio" value="css/estilos.css">Actual
-                    </label>
+                    <label for="radio-0"><input type="radio" id="radio-0" name="estilo-radio" value="0">Predeterminado</label>
                 </div>
                 <div class="input-radio">
-                    <label for="retro">
-                        <input type="radio" id="retro" name="estilo-radio" value="css/estilos-retro.css">Retro
-                    </label>
+                    <label for="radio-1"><input type="radio" id="radio-1" name="estilo-radio" value="1">Retro</label>
                 </div>
                 <div class="input-radio">
-                    <label for="futuro">
-                        <input type="radio" id="futuro" name="estilo-radio" value="css/estilos-futuro.css">Futuro
-                    </label>
+                    <label for="radio-2"><input type="radio" id="radio-2" name="estilo-radio" value="2">Futuro</label>
                 </div>
                 <div class="input-radio">
-                    <label for="sin-estilo">
-                        <input type="radio" id="sin-estilo" name="estilo-radio">Sin estilo
-                    </label>
+                    <label for="radio-3"><input type="radio" id="radio-3" name="estilo-radio" value="3">Sin estilo</label>
                 </div>
             </label>
         </div>
@@ -125,14 +110,14 @@
             <div class="fieldsets">
                 <div class="cont-datos-personales">
                     <fieldset class="datos-personales">
-                        <legend> <span class="emoji">🙋🏼‍♂️</span> Datos Personales <span class="emoji">👀</span></legend>
+                        <legend><span class="emoji">🙋🏼‍♂️</span> <span class="legend-texto"> Datos <span class="legend-texto">Personales</span> </span> <span class="emoji">👀</span></legend>
                         <div class="inputs-datos-personales">
                             <label for="nombre">Nombre:*</label>
-                            <input type="text" id="nombre" name="nombre" maxlength="20" required><br>
+                            <input type="text" id="nombre" name="nombre" maxlength="20" required autofocus><br>
                             <label for="apellido">Apellido:*</label>
                             <input type="text" id="apellido" name="apellido" maxlength="30" required><br>
-                            <label for="Documento">Documento:*</label>
-                            <input title="documento" type="number" id="documento" name="Documento" max="60000000" min="1000000" required><br>
+                            <label for="documento">Documento:*</label>
+                            <input type="number" id="documento" name="Documento" max="99999999" min="1000000" required><br>
                             <label for="nacionalidad">Nacionalidad:*</label>
                             <select name="nacionalidad" id="nacionalidad" required>
                             <option value disabled selected>- Seleccionar -</option>
@@ -149,7 +134,7 @@
                             </select><br>
                             <label for="mensaje">Contanos un poco de vos... </label>
                             <textarea name="mensaje" id="mensaje"></textarea><br>
-                            <label for="sexo">Sexo:*</label><br>
+                            <label>Sexo:*</label><br>
                             <div class="radios">
                                 <label for="femenino"><input type="radio" id="femenino" name="genero" value="femenino" checked> Femenino</label>
                                 <label for="masculino"><input type="radio" id="masculino" name="genero" value="masculino"> Masculino</label>
@@ -161,7 +146,7 @@
                 <div class="contacto-y-actividades">
                     <div class="cont-contacto">
                         <fieldset class="contacto">
-                            <legend> <span class="emoji">📱</span> Datos de contacto <span class="emoji">📧</span></legend>
+                            <legend> <span class="emoji">📱</span> <span class="legend-texto"> Datos</span> de <span class="legend-texto">contacto </span> <span class="emoji">📧</span></legend>
                             <div class="inputs-contacto">
                             <label for="telefono">Teléfono:</label>
                             <input type="tel" id="telefono" name="telefono" max="999999999" placeholder="Código de área y número"><br>
@@ -171,7 +156,7 @@
                     </div>
                     <div class="cont-actividades">
                         <fieldset class="actividades">
-                            <legend><span class="emoji">🚴</span> Actividades <span class="emoji">🤸🏼‍♂️</span></legend><br>
+                            <legend><span class="emoji">🚴</span> <span class="legend-texto"> Actividades </span> <span class="emoji">🤸🏼‍♂️</span></legend><br>
                             <div class="inputs-actividades">
                                 <label>Por favor, indicá cuáles actividades te interesan. <br><br>
                                 Sede Palermo:<br><br>
@@ -207,7 +192,8 @@
             </div>
         </form>
     </main>
-    <script src="js/index.js"></script>
+
+    <script src="./js/index.js"></script>
     <script src="https://kit.fontawesome.com/12ccf94b47.js" crossorigin="anonymous"></script>
 </body>
 </html>

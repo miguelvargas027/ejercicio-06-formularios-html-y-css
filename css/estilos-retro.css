@@ -1,3 +1,5 @@
+/* Fuentes utilizadas */
+
 @font-face {
     font-family: Swell;
     src: url(../fonts/swell-regular.ttf);
@@ -8,6 +10,8 @@
     src: url(../fonts/Montserrat-VariableFont_wght.ttf);
 }
 
+
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -18,22 +22,27 @@
     display: none;
 }
 
+/* Encabezado */
+
 .titulo {
     height: 200px;
     background: url(../assets/img/retro.jpg);
     background-size: 200px;
-    background-repeat:repeat-x;
+    background-repeat: repeat-x;
     font-family: Swell;
     font-size: 5rem;
     font-weight: 500;
     text-transform: uppercase;
-    color: #F4E3C7; /* Color: Champagne */
-    text-shadow: 5px 5px 2px #F3B143; /* Color: Hunyadi yellow */
+    color: #F4E3C7;
+    /* Color: Champagne */
+    text-shadow: 5px 5px 2px #F3B143;
+    /* Color: Hunyadi yellow */
     display: flex;
     justify-content: end;
     align-items: end;
     padding-right: 6%;
-    border-bottom: solid 2px #000000; /* Color: Black */
+    border-bottom: solid 2px #000000;
+    /* Color: Black */
 }
 
 @media (max-width: 500px) {
@@ -41,6 +50,8 @@
         font-size: 3.3rem;
     }
 }
+
+/*cajitas forms*/
 
 main {
     font-family: Montserrat;
@@ -51,28 +62,36 @@ fieldset {
     border: none;
 }
 
-.cont-datos-personales, .cont-contacto, .cont-actividades {
+.cont-datos-personales,
+.cont-contacto,
+.cont-actividades {
     padding: 2%;
     padding-bottom: 3%;
 }
 
 .cont-datos-personales {
-    background-color: #B2E3CD; /* Color: Celadon */
+    background-color: #B2E3CD;
+    /* Color: Celadon */
 }
 
 .cont-contacto {
-    background-color: #F3B143; /* Color: Hunyadi yellow */
+    background-color: #F3B143;
+    /* Color: Hunyadi yellow */
 }
 
 .cont-actividades {
-    background-color: #F4E3C7; /* Color: Champagne */
+    background-color: #F4E3C7;
+    /* Color: Champagne */
 }
+
+/*Leyendas*/
 
 legend {
     font-family: Swell;
     font-size: 2.7rem;
     margin-left: 5px;
-    color: #000000; /* Color: Black */
+    color: #000000;
+    /* Color: Black */
 }
 
 .datos-personales legend::after {
@@ -87,25 +106,13 @@ legend {
     content: "🎾";
 }
 
-.inputs-datos-personales, .inputs-contacto, .inputs-actividades {
+/* Inputs: posición */
+
+.inputs-datos-personales,
+.inputs-contacto,
+.inputs-actividades {
     width: 500px;
     justify-self: center;
-}
-
-#nombre, #apellido, #documento, #telefono, #email, #nacionalidad, #mensaje {
-    display: block;
-    width: 100%;
-    border-radius: 5px;
-    font-size: 1.1rem;
-}
-
-#nombre, #apellido, #documento, #telefono, #email, #nacionalidad {
-    height: 1.8rem;
-}
-
-#mensaje {
-    height: 6rem;
-    resize: none;
 }
 
 .radios {
@@ -117,17 +124,16 @@ legend {
     margin-left: 2%;
 }
 
-main input[type="radio"], main input[type="checkbox"] {
-    accent-color: #F3B143; /* Color: Hunyadi yellow */
-}
-
 .checks-actividades {
     justify-self: center;
 }
 
 @media (max-width: 600px) {
-    .inputs-datos-personales, .inputs-contacto, .inputs-actividades {
-            width: 85%;
+
+    .inputs-datos-personales,
+    .inputs-contacto,
+    .inputs-actividades {
+        width: 85%;
     }
 
     .checks-actividades {
@@ -137,9 +143,48 @@ main input[type="radio"], main input[type="checkbox"] {
     }
 }
 
+/* Estilos inputs */
+
+#nombre,
+#apellido,
+#documento,
+#telefono,
+#email,
+#nacionalidad,
+#mensaje {
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 1.1rem;
+}
+
+#nombre,
+#apellido,
+#documento,
+#telefono,
+#email,
+#nacionalidad {
+    height: 1.8rem;
+}
+
+#mensaje {
+    height: 6rem;
+    resize: none;
+}
+
+main input[type="radio"],
+main input[type="checkbox"] {
+    accent-color: #F3B143;
+    /* Color: Hunyadi yellow */
+}
+
+/*Parte inferior y botones*/
+
 .parte-inferior {
-    background-color: #000000; /* Color: Black */
-    color: #F4E3C7; /* Color: Champagne */
+    background-color: #000000;
+    /* Color: Black */
+    color: #F4E3C7;
+    /* Color: Champagne */
     padding: 2%;
 }
 
@@ -162,12 +207,15 @@ main input[type="radio"], main input[type="checkbox"] {
     font-family: Swell;
     font-size: 1.3rem;
     font-weight: 100;
-    color: #000000; /* Color: Black */
-    background-color: #B2E3CD; /* Color: Celadon */
+    color: #000000;
+    /* Color: Black */
+    background-color: #B2E3CD;
+    /* Color: Celadon */
     border-radius: 7px;
 }
 
 #iniciar-afiliacion:hover,
 #restablecer:hover {
-    background-color: #F3B143; /* Color: Hunyadi yellow */
+    background-color: #F3B143;
+    /* Color: Hunyadi yellow */
 }

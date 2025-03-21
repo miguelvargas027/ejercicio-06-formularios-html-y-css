@@ -1,3 +1,5 @@
+/* Fuentes utilizadas */
+
 @font-face {
     font-family: RobotoCondensed;
     src: url(../fonts/RobotoCondensed-VariableFont_wght.ttf);
@@ -7,6 +9,8 @@
     font-family: RON;
     src: url(../fonts/RON.ttf);
 }
+
+/* Reset */
 
 * {
     margin: 0;
@@ -22,6 +26,8 @@ html {
     display: none;
 }
 
+/* Encabezado */
+
 .encabezado {
     background: linear-gradient(to right, #F5581F, #ACAAAA);
     /* Colores: Giant orange, Silver */
@@ -30,7 +36,8 @@ html {
 }
 
 .cont-titulo {
-    background-color: #0F0C13; /* Color: Night */
+    background-color: #0F0C13;
+    /* Color: Night */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -53,11 +60,14 @@ html {
     -moz-text-fill-color: transparent;
 }
 
+/*cajitas forms*/
+
 main {
     background: url(../assets/img/futuro.jpg) no-repeat;
     background-position: center;
     background-size: cover;
-    color: #ACAAAA; /* Color: Silver */
+    color: #ACAAAA;
+    /* Color: Silver */
     height: calc(100%-135px);
     font-family: RobotoCondensed, sans-serif;
     font-weight: 300;
@@ -73,7 +83,8 @@ main {
 fieldset {
     display: flex;
     flex-direction: column;
-    border: solid 1px #F5581F; /* Color: Giants orange */
+    border: solid 1px #F5581F;
+    /* Color: Giants orange */
     border-radius: 10px;
     background-color: rgba(18, 2, 35, 0.6);
     /* Color Dark purple #120223 */
@@ -81,12 +92,17 @@ fieldset {
     width: 300px;
 }
 
+/*Leyendas*/
+
 legend {
     font-family: RON;
     font-weight: 300;
     font-size: 1.3rem;
-    text-shadow: 3px 3px #0F0C13; /* Color: Night */
+    text-shadow: 3px 3px #0F0C13;
+    /* Color: Night */
 }
+
+/* Inputs: posición */
 
 .datos-personales {
     height: 580px;
@@ -105,7 +121,8 @@ legend {
     margin-left: 20px;
 }
 
-.actividades, .contacto {
+.actividades,
+.contacto {
     height: 100%;
 }
 
@@ -116,29 +133,6 @@ legend {
 
 .cont-contacto {
     height: 35%;
-}
-
-#nombre, #apellido, #documento, #telefono, #email, #nacionalidad, #mensaje {
-    display: block;
-    width: 100%;
-    border-radius: 4px;
-    background-color: #ACAAAA; /* Color: Silver */
-    padding: 3%;
-    font-size: 1.1rem;
-}
-
-#nombre, #apellido, #documento, #telefono, #email, #nacionalidad{
-    height: 2.2rem;
-}
-
-#mensaje {
-    height: 6rem;
-    resize: none;
-}
-
-main input[type="radio"], main input[type="checkbox"] {
-    accent-color: #1CDCE1; /* Color: Robbin egg blue */
-    margin: 0px 3px 2px 3px;
 }
 
 .checks-actividades {
@@ -172,11 +166,53 @@ main input[type="radio"], main input[type="checkbox"] {
     }
 }
 
+/* Estilos inputs */
+
+#nombre,
+#apellido,
+#documento,
+#telefono,
+#email,
+#nacionalidad,
+#mensaje {
+    display: block;
+    width: 100%;
+    border-radius: 4px;
+    background-color: #ACAAAA;
+    /* Color: Silver */
+    padding: 3%;
+    font-size: 1.1rem;
+}
+
+#nombre,
+#apellido,
+#documento,
+#telefono,
+#email,
+#nacionalidad {
+    height: 2.2rem;
+}
+
+#mensaje {
+    height: 6rem;
+    resize: none;
+}
+
+main input[type="radio"],
+main input[type="checkbox"] {
+    accent-color: #1CDCE1;
+    /* Color: Robbin egg blue */
+    margin: 0px 3px 2px 3px;
+}
+
+/*Parte inferior y botones*/
+
 .ultimos-campos {
     margin-top: 2%;
     justify-self: center;
     font-size: 1.1rem;
-    text-shadow: 1px 1px #0F0C13; /* Color: Night */
+    text-shadow: 1px 1px #0F0C13;
+    /* Color: Night */
 }
 
 .botonera-inferior {
@@ -185,20 +221,27 @@ main input[type="radio"], main input[type="checkbox"] {
     justify-content: center;
 }
 
-#iniciar-afiliacion, #restablecer {
+#iniciar-afiliacion,
+#restablecer {
     margin: 0 1% 0 1%;
     width: 145px;
     height: 40px;
     font-family: RON;
-    color: #0F0C13; /* Color: Night */
-    background-color: #ACAAAA; /* Color: Silver */
+    color: #0F0C13;
+    /* Color: Night */
+    background-color: #ACAAAA;
+    /* Color: Silver */
     border-radius: 7px;
 }
 
-#iniciar-afiliacion:hover, #restablecer:hover {
-    background-color: #1CDCE1; /* Color: Robbin egg blue */
+#iniciar-afiliacion:hover,
+#restablecer:hover {
+    background-color: #1CDCE1;
+    /* Color: Robbin egg blue */
 }
 
-#iniciar-afiliacion:active, #restablecer:active {
-    background-color: #F5581F; /* Color: Giants orange */
+#iniciar-afiliacion:active,
+#restablecer:active {
+    background-color: #F5581F;
+    /* Color: Giants orange */
 }
