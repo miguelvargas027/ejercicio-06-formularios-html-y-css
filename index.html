@@ -47,6 +47,11 @@
             }
         }
 
+        .hundido {
+            background-color: #ccc;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
     </style>
 
     <!-- Skin retro: -->
@@ -56,7 +61,7 @@
     <!-- <link rel="stylesheet" href="./css/estilos-futuro.css"> -->
 
     <!-- Skin predeterminado: -->
-    <link rel="stylesheet" href="./css/predeterminado.css"> 
+    <link id= "estilo" rel="stylesheet" href="./css/estilos.css"> 
 
 </head>
 <body>
@@ -74,23 +79,31 @@
             </button>
             <select name="select-estilo" id="select-estilo">
                 <option value="" disabled checked>-Seleccionar-</option>
-                <option value="actual">Actual</option>
-                <option value="retro">Retro</option>
-                <option value="futuro">Futuro</option>
+                <option value="css/estilos.css">Actual</option>
+                <option value="css/estilos-retro.css">Retro</option>
+                <option value="css/estilos-futuro.css">Futuro</option>
                 <option value="sin-estilo">Sin estilo</option>
             </select>
             <label for="estilo-radio" class="estilo-radio">
                 <div class="input-radio">
-                    <label for="actual"><input type="radio" id="actual" name="estilo-radio">Actual</label>
+                    <label for="actual">
+                        <input type="radio" id="actual" name="estilo-radio" value="css/estilos.css">Actual
+                    </label>
                 </div>
                 <div class="input-radio">
-                    <label for="retro"><input type="radio" id="retro" name="estilo-radio">Retro</label>
+                    <label for="retro">
+                        <input type="radio" id="retro" name="estilo-radio" value="css/estilos-retro.css">Retro
+                    </label>
                 </div>
                 <div class="input-radio">
-                    <label for="futuro"><input type="radio" id="futuro" name="estilo-radio">Futuro</label>
+                    <label for="futuro">
+                        <input type="radio" id="futuro" name="estilo-radio" value="css/estilos-futuro.css">Futuro
+                    </label>
                 </div>
                 <div class="input-radio">
-                    <label for="sin-estilo"><input type="radio" id="sin-estilo" name="estilo-radio">Sin estilo</label>
+                    <label for="sin-estilo">
+                        <input type="radio" id="sin-estilo" name="estilo-radio">Sin estilo
+                    </label>
                 </div>
             </label>
         </div>
@@ -187,5 +200,6 @@
             </div>
         </form>
     </main>
+    <script src="/js/index.js"></script>
 </body>
 </html>

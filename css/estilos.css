@@ -85,11 +85,6 @@ textarea:focus {
     color: white;
 }
 
-input:focus fieldset {
-    background-color: red;
-}
-
-
 .cont-actividades, .cont-contacto, .cont-datos-personales {
     padding: 5% 0;
     text-align: center;
@@ -110,13 +105,11 @@ input:focus fieldset {
 
 /*campos contacto*/
 
-input#telefono {
+input#telefono, input#email {
     text-align: right;
 }
 
-input#email {
-    text-align: right;
-}
+
 
 /*botones*/
 
