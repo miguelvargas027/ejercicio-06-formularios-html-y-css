@@ -1,4 +1,4 @@
-// Obtén los elementos necesarios
+// Variables de botones y elementos del DOM
 const linkEstilo = document.getElementById("estilo");
 const selectorEstilos = document.getElementById("select-estilo");
 const radioEstilos = document.querySelectorAll("input[name='estilo-radio']");
@@ -45,7 +45,7 @@ function cambiarEstiloAleatorio() {
 }
 document.getElementById("estilo-random").addEventListener("click", cambiarEstiloAleatorio);
 
-// Función para cambiar el estilo según el <select>
+// Función para cambiar el estilo según el select
 function cambiarEstiloSelect() {
     const rutaCSS = selectorEstilos.value;
     linkEstilo.setAttribute("href", rutaCSS);
@@ -55,7 +55,7 @@ function cambiarEstiloSelect() {
 }
 selectorEstilos.addEventListener("change", cambiarEstiloSelect);
 
-//Función para cambiar el estilo según el <input type="radio">
+//Función para cambiar el estilo según el radio
 function cambiarEstiloRadio() {
     const rutaCSS = this.value;
     linkEstilo.setAttribute("href", rutaCSS);
