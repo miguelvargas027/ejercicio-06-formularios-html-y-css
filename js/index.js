@@ -8,7 +8,7 @@ const botonSiguiente = document.getElementById("siguiente-estilo");
 // Variable para rastrear si el modo "Recordar" está activo
 let recordarActivo = false;
 
-// Array con los estilos disponibles
+// estilos disponibles e indice actual
 const estilos = ["estilos.css", "estilos-futuro.css", "estilos-retro.css"];
 let indiceActual = 0;
 
