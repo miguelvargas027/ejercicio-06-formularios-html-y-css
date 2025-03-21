@@ -87,7 +87,7 @@ function toggleRecordar() {
 
     if (recordarActivo) {
         // Guarda el estilo actual en localStorage
-        localStorage.setItem("estiloGuardado", linkEstilo.getAttribute("href"));
+        localStorage.setItem("estiloGuardado", indiceActual);
         botonRecordar.classList.add("hundido"); // Aplica el estilo "hundido"
     } else {
         // Elimina el estilo guardado de localStorage
@@ -102,11 +102,11 @@ botonRecordar.addEventListener("click", toggleRecordar);
 function aplicarEstiloGuardado() {
     const estiloGuardado = localStorage.getItem("estiloGuardado");
     if (estiloGuardado) {
-        linkEstilo.setAttribute("href", estiloGuardado);
+        linkEstilo.setAttribute("href", `${estilos[estiloGuardado]}`);
         recordarActivo = true;
         botonRecordar.classList.add("hundido");
         for (var i = 0; i < estilos.length; i++) {
-            if (estiloGuardado == estilos[i]) {
+            if (estiloGuardado == i) {
                 indiceActual = i;
             }
         }
