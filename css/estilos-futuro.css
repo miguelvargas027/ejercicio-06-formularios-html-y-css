@@ -188,9 +188,12 @@ legend {
 #apellido,
 #documento,
 #telefono,
-#correo,
-#nacionalidad {
+#correo {
     height: 2.2rem;
+}
+
+#nacionalidad {
+    height: 2.3rem;
 }
 
 #mensaje {
